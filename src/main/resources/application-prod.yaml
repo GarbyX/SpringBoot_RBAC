@@ -1,0 +1,57 @@
+##############################################
+#            Server Configuration            #
+##############################################
+server:
+  port: 5000
+  error:
+    include-message: always
+
+##############################################
+#           Database Configuration           #
+##############################################
+
+spring:
+  mvc:
+    log-request-details: true
+  datasource:
+    #    url: jdbc:mysql://localhost:3307/sales?serverTimezone=GMT+1
+    url: jdbc:mysql://localhost:3307/sales
+    username: **********
+    password: **********
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    format_sql: true
+
+
+##############################################
+#           Swagger Configuration           #
+##############################################
+
+springdoc:
+  api-docs:
+    path: /api-docs
+    title: API Documentation
+    description: API Documentation
+
+  swagger-ui:
+    path: /swagger-ui
+    operationsSorter: method
+
+
+##############################################
+#           Logging Configuration           #
+##############################################
+
+  logging:
+    level:
+      web: DEBUG                              #for additional information
+    config: classpath:logback-spring.xml
+    file:
+      name: sales-prod.log
