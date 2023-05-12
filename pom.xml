@@ -76,6 +76,14 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+			<version>8.0.32</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -83,6 +91,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.0.4</version>
 			</plugin>
 		</plugins>
 	</build>
