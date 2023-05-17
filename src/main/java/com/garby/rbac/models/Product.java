@@ -14,7 +14,7 @@ public class Product {
     private String madein;
     private float price;
 
-    protected Product() {
+    public Product() {
     }
 
     public Product(Long id, String name, String brand, String madein, float price) {
